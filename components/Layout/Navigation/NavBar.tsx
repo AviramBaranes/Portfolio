@@ -1,9 +1,6 @@
-import { NextComponentType } from 'next';
 import Link from 'next/link';
 
-interface NavBarPropsTypes {}
-
-const NavBar: NextComponentType<NavBarPropsTypes> = () => {
+const NavBar: React.FC = () => {
   return (
     <header>
       <nav>

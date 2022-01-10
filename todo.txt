@@ -1,0 +1,22 @@
+pages:
+    side-nav
+    about
+    skills
+    projects
+        H-life
+        Reminder app
+        social media app
+        time manager
+        ignite
+
+server:
+    server side rendering
+    contact endpoint
+
+styles:
+    logo
+    css
+    framer motion
+
+deployment
+

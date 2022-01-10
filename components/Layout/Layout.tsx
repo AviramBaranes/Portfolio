@@ -1,9 +1,14 @@
-import { NextComponentType } from "next";
+import NavBar from './Navigation/NavBar';
 
-interface LayoutPropsTypes{}
+interface LayoutPropsTypes {}
 
-const Layout: NextComponentType<LayoutPropsTypes> = ({children}) =>{
-    return <>{children}</>
-}
+const Layout: React.FC<LayoutPropsTypes> = ({ children }) => {
+  return (
+    <>
+      <NavBar />
+      <main>{children}</main>
+    </>
+  );
+};
 
 export default Layout;
