@@ -10,13 +10,14 @@ const about: FC<about> = () => {
       <div>
         <h3>About</h3>
         <p>
-          I am an ambitious and motivated autodidact software developer with a
-          passion to enrich and develop new skills and knowledge.
+          I am a Full Stack developer, with experience building websites and web
+          applications. I specialize in TypeScript, JavaScript, Node and React.
         </p>
         <p>
-          A Full Stack developer, with experience building websites and web
-          applications. I specialize in TypeScript and JavaScript, Node and
-          React.
+          I am an ambitious and motivated autodidact developer with boundless
+          enthusiasm and passion to enrich and develop new skills and knowledge.
+          <br />I love challenging my self with things that matters and to keep
+          learning new things.
         </p>
         <p>
           Besides programming I love to do sport primarily MMA (black belt in
@@ -24,7 +25,7 @@ const about: FC<about> = () => {
         </p>
         <Link href='/contact'>Sounds Good!</Link>
       </div>
-      {/* <Image src={} /> */}
+      <Image src='/about-page-image.jpg' width={350} height={450} />
     </>
   );
 };

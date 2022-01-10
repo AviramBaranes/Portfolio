@@ -1,6 +1,5 @@
 pages:
     side-nav
-    about
     skills
     projects
         H-life
