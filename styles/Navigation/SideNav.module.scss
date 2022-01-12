@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+.SideNav {
+  position: absolute;
+}
+
+@media (min-width: $desktop-viewport) {
+  .SideNav {
+    display: none;
+  }
+}

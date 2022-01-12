@@ -25,7 +25,12 @@ const about: FC<about> = () => {
         </p>
         <Link href='/contact'>Sounds Good!</Link>
       </div>
-      <Image src='/about-page-image.jpg' width={350} height={450} />
+      <Image
+        src='/about-page-image.jpg'
+        width={350}
+        height={450}
+        alt='web-development-image'
+      />
     </>
   );
 };
