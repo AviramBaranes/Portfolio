@@ -2,6 +2,104 @@
 
 .SideNav {
   position: absolute;
+  background-color: black;
+  right: 0;
+  border-radius: 0 0 0 1rem;
+  width: 16rem;
+}
+
+.Burger {
+  cursor: pointer;
+  z-index: 100;
+  position: fixed;
+  right: 12.5px;
+  top: 12.5px;
+  div {
+    width: 20px;
+    height: 3px;
+    background-color: $primary-color;
+    margin: 0.25rem;
+  }
+}
+
+.NavigationSec {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Links {
+  text-align: center;
+  padding: 0;
+  li {
+    &:nth-child(1) {
+      border-top: 1px solid white;
+    }
+    border-bottom: 1px solid white;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.Logo {
+  cursor: pointer;
+  text-align: center;
+  background-color: black;
+  padding: 2rem;
+  img {
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  h6,
+  p {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  h6 {
+    color: $primary-color;
+  }
+}
+
+.Icons {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  padding: 0;
+  justify-content: space-around;
+  img {
+    filter: invert(100%) sepia(1%) saturate(1283%) hue-rotate(201deg)
+      brightness(117%) contrast(100%);
+
+    &:hover {
+      filter: invert(18%) sepia(100%) saturate(3011%) hue-rotate(329deg)
+        brightness(81%) contrast(107%);
+    }
+  }
+}
+
+@media (min-width: $big-phone-viewport) {
+  .SideNav {
+    width: 20rem;
+  }
+  .NavigationSec {
+    height: 75vh;
+  }
+}
+
+@media (min-width: $tablet-viewport) {
+  .SideNav {
+    width: 27.5rem;
+  }
+  .NavigationSec {
+    height: 80vh;
+  }
 }
 
 @media (min-width: $desktop-viewport) {
