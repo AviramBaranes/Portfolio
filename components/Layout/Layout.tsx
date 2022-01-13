@@ -1,7 +1,6 @@
+import classes from '../../styles/Layout/Layout.module.scss';
 import NavBar from './Navigation/NavBar';
 import SideNav from './Navigation/SideNav';
-
-import classes from '../../styles/Layout/Layout.module.scss';
 
 interface LayoutPropsTypes {}
 

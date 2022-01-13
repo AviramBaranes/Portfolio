@@ -2,27 +2,28 @@
 
 .SideNav {
   position: absolute;
-  background-color: black;
   right: 0;
-  border-radius: 0 0 0 1rem;
+  z-index: 100;
   width: 16rem;
 }
 
 .Burger {
+  z-index: 101;
   cursor: pointer;
-  z-index: 100;
   position: fixed;
   right: 12.5px;
   top: 12.5px;
   div {
-    width: 20px;
-    height: 3px;
+    width: 27px;
+    height: 3.5px;
     background-color: $primary-color;
-    margin: 0.25rem;
+    margin: 0.34rem;
   }
 }
 
 .NavigationSec {
+  background-color: black;
+  border-radius: 0 0 0 1rem;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -99,6 +100,14 @@
   }
   .NavigationSec {
     height: 80vh;
+  }
+  .Burger {
+    div {
+      width: 32px;
+      height: 4px;
+      background-color: $primary-color;
+      margin: 0.45rem;
+    }
   }
 }
 
