@@ -31,7 +31,7 @@ const LanguageChart: FC<LanguageChart> = ({
         <motion.div
           animate={{ width: chartWidth }}
           initial={{ width: 0 }}
-          transition={{ duration: 1, ease: 'anticipate', delay: 0.75 * index }}
+          transition={{ duration: 1, ease: 'anticipate', delay: 0.2 * index }}
           style={{
             width: chartWidth,
             height: 1,
