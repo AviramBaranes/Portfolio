@@ -25,21 +25,27 @@ const LanguageChart: FC<LanguageChart> = ({
   }, [chartContainerRef]);
 
   return (
-    <div>
+    <>
       <p>{name}</p>
       <div className={classes.LanguageChartContainer} ref={chartContainerRef}>
         <motion.div
           animate={{ width: chartWidth }}
           initial={{ width: 0 }}
-          transition={{ duration: 1, ease: 'anticipate', delay: 0.2 * index }}
+          transition={{
+            duration: 0.75,
+            // ease: 'anticipate',
+            type: 'spring',
+            delay: 0.1 * index,
+          }}
           style={{
             width: chartWidth,
-            height: 1,
+            borderRadius: '5rem',
+            height: 4,
             backgroundColor: color,
           }}
         ></motion.div>
       </div>
-    </div>
+    </>
   );
 };
 

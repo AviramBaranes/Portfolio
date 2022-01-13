@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 import classes from '../../../styles/Navigation/NavBar.module.scss';
 import me from '../../../public/Me/aviram.jpg';
-import linkedInIcon from '../../../public/icons/linkedin-icon.svg';
-import githubIcon from '../../../public/icons/github-icon.svg';
+import linkedInIcon from '../../../public/icons/contact/linkedin-icon.svg';
+import githubIcon from '../../../public/icons/contact/github-icon.svg';
 import Image from 'next/image';
 
 const NavBar: React.FC = () => {
