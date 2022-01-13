@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 import classes from '../../../styles/Navigation/NavBar.module.scss';
 import me from '../../../public/Me/aviram.jpg';
@@ -8,7 +9,12 @@ import Image from 'next/image';
 
 const NavBar: React.FC = () => {
   return (
-    <header className={classes.NavBar}>
+    <motion.header
+      animate={{ x: 0 }}
+      initial={{ x: '-100%' }}
+      transition={{ duration: 0.4 }}
+      className={classes.NavBar}
+    >
       <nav>
         <div>
           <Link href='/'>
@@ -49,7 +55,7 @@ const NavBar: React.FC = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 

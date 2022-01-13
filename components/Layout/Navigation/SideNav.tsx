@@ -63,7 +63,14 @@ const SideNav: FC = () => {
                   </div>
                 </Link>
               </div>
-              <ul className={classes.Links}>
+              <ul
+                className={classes.Links}
+                onClick={(e) => {
+                  if ((e.target as any).tagName === 'A') {
+                    setShouldDisplay(false);
+                  }
+                }}
+              >
                 <li>
                   <Link href='/about'>About</Link>
                 </li>
