@@ -19,9 +19,9 @@ interface FrameWorks {}
 const frameWorks = [
     {src:nodeJsIcon,alt:'node-js-icon' ,link:'https://en.wikipedia.org/wiki/Node.js'},
     {src:expressJsIcon,alt:'express-js-icon' ,link:'https://en.wikipedia.org/wiki/Express.js'},
-    {src:mongoDBIcon,alt:'mongo-db-icon' ,link:'https://en.wikipedia.org/wiki/MongoDB'},
+    {src:mongoDBIcon,alt:'mongo-db-icon' ,link:'https://en.wikipedia.org/wiki/MongoDB',white:true},
     {src:reactJsIcon,alt:'react-js-icon' ,link:'https://en.wikipedia.org/wiki/React_(JavaScript_library)'},
-    {src:nextJsIcon,alt:'next-js-icon' ,link:'https://en.wikipedia.org/wiki/Next.js'},
+    {src:nextJsIcon,alt:'next-js-icon' ,link:'https://en.wikipedia.org/wiki/Next.js',white:true},
     {src:reduxIcon,alt:'redux-icon' ,link:'https://en.wikipedia.org/wiki/Redux_(JavaScript_library)'},
     {src:jestIcon,alt:'jest-icon' ,link:'https://en.wikipedia.org/wiki/Jest_(JavaScript_framework)'},
     {src:socketIOIcon,alt:'socket-io-icon' ,link:'https://en.wikipedia.org/wiki/Socket.IO'},
@@ -33,9 +33,10 @@ const FrameWorks: FC<FrameWorks> = () => {
     <div className={classes.FrameWorks}>
       {frameWorks.map((frameWork, i) => (
         <motion.div
+          className={frameWork.white ? classes.White : ''}
           animate={{ y: 0, x: 0, opacity: 1 }}
           initial={{ y: '-100%', x: '-100%', opacity: 0 }}
-          transition={{ duration: 0.2, delay: 0.1 * i }}
+          transition={{ duration: 0.2, delay: 0.1 * i + 0.5 }}
           key={frameWork.alt}
         >
           <a href={frameWork.link} target='_blank'>
