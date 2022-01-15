@@ -8,12 +8,32 @@ import Project from './Project';
 interface MyProjects {}
 
 const MyProjects: FC<MyProjects> = () => {
-  //prettier-ignore
   const projects = [
-        {src:HlifeMainPhoto, alt:'hlife-main-photo', name:'Hlife',path:'hlife'},
-        {src:ReminderAppMainPhoto, alt:'reminderApp-main-photo', name:'Reminder App',path:'reminder-app'},
-        {src:TaskManagerMainPhoto, alt:'taskManager-main-photo', name:'Task Manager',path:'time-manager'},
-    ]
+    {
+      src: HlifeMainPhoto,
+      alt: 'hlife-main-photo',
+      name: 'Hlife',
+      path: 'hlife',
+      description:
+        'My biggest project, A MERN stack typescript application with secure users registration in the backend and amazing SVG graphs in the frontend.',
+    },
+    {
+      src: ReminderAppMainPhoto,
+      alt: 'reminderApp-main-photo',
+      name: 'Reminder App',
+      path: 'reminder-app',
+      description:
+        'A MERN stack typescript app with real time TCP server and high level animation using framer motion.',
+    },
+    {
+      src: TaskManagerMainPhoto,
+      alt: 'taskManager-main-photo',
+      name: 'Task Manager',
+      path: 'time-manager',
+      description:
+        'A vanilla javascript (but with typescript) App for managing tasks and time.',
+    },
+  ];
   return (
     <div>
       {projects.map((project, i) => (
@@ -24,6 +44,7 @@ const MyProjects: FC<MyProjects> = () => {
             name={project.name}
             path={project.path}
             index={i}
+            description={project.description}
           />
         </div>
       ))}

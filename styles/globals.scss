@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 html,
 body {
   height: 100vh;
@@ -11,6 +13,12 @@ body {
 
 main {
   width: 87.6%;
+}
+@media (min-width: $desktop-viewport) {
+  main {
+    margin-left: 12.4%;
+    padding: 1rem;
+  }
 }
 
 a {
