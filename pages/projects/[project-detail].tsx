@@ -1,8 +1,11 @@
+import { FC } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import path from 'path';
 import fs from 'fs/promises';
 
-import { FC } from 'react';
+import ProjectDetailHeader from '../../components/projects/projectDetail/ProjectDetailHeader';
+import ImageGallery from '../../components/projects/projectDetail/ImageGallery';
+import ProjectDetailFooter from '../../components/projects/projectDetail/ProjectDetailFooter';
 
 interface DetailProject {
   name: string;
@@ -23,16 +26,16 @@ const DetailProject: FC<DetailProject> = ({
 }) => {
   return (
     <>
-      {/* <ProjectDetailHeader
+      <ProjectDetailHeader
         name={name}
-        description={shortDescription}
+        shortDescription={shortDescription}
         links={links}
       />
-      <ImageGallery photoPaths={photosPaths} />
+      <ImageGallery photosPaths={photosPaths} />
       <ProjectDetailFooter
         description={description}
         technologies={technologies}
-      /> */}
+      />
     </>
   );
 };
