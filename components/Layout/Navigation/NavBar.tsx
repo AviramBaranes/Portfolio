@@ -6,8 +6,10 @@ import me from '../../../public/Me/aviram.jpg';
 import linkedInIcon from '../../../public/icons/contact/linkedin-icon.svg';
 import githubIcon from '../../../public/icons/contact/github-icon.svg';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const NavBar: React.FC = () => {
+  const { pathname } = useRouter();
   return (
     <motion.header
       animate={{ x: 0 }}
@@ -27,16 +29,24 @@ const NavBar: React.FC = () => {
         </div>
         <ul className={classes.Links}>
           <Link href='/about'>
-            <li>About</li>
+            <li className={pathname === '/about' ? classes.Active : ''}>
+              About
+            </li>
           </Link>
           <Link href='/skills'>
-            <li>My Skills</li>
+            <li className={pathname === '/skills' ? classes.Active : ''}>
+              My Skills
+            </li>
           </Link>
           <Link href='/projects'>
-            <li>Projects</li>
+            <li className={pathname === '/projects' ? classes.Active : ''}>
+              Projects
+            </li>
           </Link>
           <Link href='/contact'>
-            <li>Contact</li>
+            <li className={pathname === '/contact' ? classes.Active : ''}>
+              Contact
+            </li>
           </Link>
         </ul>
         <ul className={classes.Icons}>

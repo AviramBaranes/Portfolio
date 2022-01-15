@@ -48,7 +48,7 @@
       font-size: 1.4rem;
       cursor: pointer;
       &:hover {
-        color: $primary-color;
+        font-weight: 700;
       }
     }
   }
@@ -66,5 +66,9 @@
           brightness(81%) contrast(107%);
       }
     }
+  }
+
+  .Active {
+    color: $primary-color;
   }
 }
