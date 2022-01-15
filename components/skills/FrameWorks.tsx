@@ -18,11 +18,11 @@ interface FrameWorks {}
 //prettier-ignore
 const frameWorks = [
     {src:nodeJsIcon,alt:'node-js-icon' ,link:'https://en.wikipedia.org/wiki/Node.js'},
-    {src:expressJsIcon,alt:'express-js-icon' ,link:'https://en.wikipedia.org/wiki/Express.js'},
+    {src:expressJsIcon,alt:'express-js-icon' ,link:'https://en.wikipedia.org/wiki/Express.js',white:true},
     {src:mongoDBIcon,alt:'mongo-db-icon' ,link:'https://en.wikipedia.org/wiki/MongoDB',white:true},
     {src:reactJsIcon,alt:'react-js-icon' ,link:'https://en.wikipedia.org/wiki/React_(JavaScript_library)'},
     {src:nextJsIcon,alt:'next-js-icon' ,link:'https://en.wikipedia.org/wiki/Next.js',white:true},
-    {src:reduxIcon,alt:'redux-icon' ,link:'https://en.wikipedia.org/wiki/Redux_(JavaScript_library)'},
+    {src:reduxIcon,alt:'redux-icon' ,link:'https://en.wikipedia.org/wiki/Redux_(JavaScript_library)',white:true},
     {src:jestIcon,alt:'jest-icon' ,link:'https://en.wikipedia.org/wiki/Jest_(JavaScript_framework)'},
     {src:socketIOIcon,alt:'socket-io-icon' ,link:'https://en.wikipedia.org/wiki/Socket.IO'},
     {src:D3Icon,alt:'d3-icon' ,link:'https://en.wikipedia.org/wiki/D3.js'},

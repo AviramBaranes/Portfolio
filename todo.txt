@@ -4,10 +4,10 @@ pages:
         Reminder app
         social media app
         time manager
-        ignite
+        movie app
+    contact page
 
 server:
-    server side rendering
     contact endpoint
 
 styles:
