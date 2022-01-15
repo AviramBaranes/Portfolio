@@ -10,7 +10,10 @@ import ProjectDetailFooter from '../../components/projects/projectDetail/Project
 interface DetailProject {
   name: string;
   shortDescription: string;
-  links: string[];
+  links: {
+    github: string;
+    website?: string;
+  };
   photosPaths: string[];
   description: string;
   technologies: string[];
