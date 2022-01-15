@@ -65,6 +65,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const jsonData = await fs.readFile(dataFilePath);
 
-  const props = JSON.parse(jsonData.toString());
+  const projectDetailData = JSON.parse(jsonData.toString());
+  const props = { ...projectDetailData };
+
+  const photosDirPath = path.join(
+    process.cwd(),
+    'public',
+    'projects',
+    props.photosDirName
+  );
+  const photosPaths = (await fs.readdir(photosDirPath)).map(
+    (fileName) => `/projects/${props.photosDirName}/${fileName}`
+  );
+  delete props.photoDirName;
+  props.photosPaths = photosPaths;
   return { props };
 };

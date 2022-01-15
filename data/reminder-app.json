@@ -1,4 +1,18 @@
 {
   "name": "Reminder App",
-  "technologies": ["Next.js", "Node.js"]
+  "shortDescription": "A MERN stack typescript app with real time TCP server and high level animation using framer motion.",
+  "links": {
+    "github": "https://github.com/AviramBaranes/ReminderApp",
+    "website": "https://reminder-app-seven.vercel.app/"
+  },
+  "photosDirName": "ReminderApp",
+  "technologies": [
+    "node.js",
+    "next.js",
+    "typescript",
+    "express.js",
+    "mongo-db",
+    "redux",
+    "socket.io"
+  ]
 }
