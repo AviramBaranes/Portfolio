@@ -14,5 +14,8 @@ styles:
     css
     framer motion
 
+*extra:
+    images modal instead of link
+
 deployment
 

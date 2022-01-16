@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC, useState } from 'react';
 
 interface ImageGallery {
@@ -7,12 +8,28 @@ interface ImageGallery {
 
 const ImageGallery: FC<ImageGallery> = ({ photosPaths }) => {
   const [currentImage, setCurrentImage] = useState(
-    photosPaths[Math.floor(photosPaths.length / 2)]
+    photosPaths.find((path) => path.endsWith('.gif')) ||
+      photosPaths[Math.floor(photosPaths.length / 2)]
   );
 
   return (
     <div>
-      <Image src={currentImage} width={300} height={200} />
+      <Link href={process.env.BASE_URL + currentImage}>
+        <Image src={currentImage} width={830} height={400} />
+      </Link>
+      <br />
+      {photosPaths.map((src) => {
+        if (src !== currentImage) {
+          return (
+            <Image
+              onClick={() => setCurrentImage(src)}
+              src={src}
+              width={276.6}
+              height={133.3}
+            />
+          );
+        }
+      })}
     </div>
   );
 };

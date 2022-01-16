@@ -61,7 +61,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { params } = context;
   const currentPath = `${params!['project-detail']}.json`;
   const dataFilePath = path.join(process.cwd(), 'data', currentPath);
-  console.log(dataFilePath);
 
   const jsonData = await fs.readFile(dataFilePath);
 
