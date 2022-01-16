@@ -1,3 +1,20 @@
 {
-  "name": "Hlife"
+  "name": "Hlife",
+  "shortDescription": "By far my biggest project, A MERN stack typescript application with secure users registration in the backend and amazing SVG graphs in the frontend.",
+  "links": {
+    "github": "https://github.com/AviramBaranes/Hlife",
+    "website": "https://hlife.vercel.app/"
+  },
+  "photosDirName": "Hlife",
+  "description": "Hlife mission is to allow users to achieve their physical goals as soon and as easy as possible. It does it by creating for the user a custom program and goals list. Then the user can declare on his progress every day. By this Hlife is able to track the user progress over time, and displaying it in detailed graphs.\n \n Its a Typescript MERN stack application built using Node.js, express.js and mongoose for the backend, and React with Next.js for the frontend. In the backend I built a dockerized REST API and made it secure via JWT, csrf, input-validation, rate limiter, secure http headers (Helmet.js) and more. The api is made from a lot of advanced endpoints for CRUD operations on a no sql database (MongoDB). The backend has 273 unit tests using mocha and chai.\n For the frontend I used Next.js for server side rendering and SEO, I displayed the data in graphs using D3.js and styled everything with scss. The frontend has 189 unit and integration tests using jest and rtl.\n  The entire app is using CI/CD workflow via GIT actions. ",
+  "technologies": [
+    "node.js",
+    "next.js",
+    "typescript",
+    "express.js",
+    "mongo-db",
+    "redux",
+    "d3",
+    "scss"
+  ]
 }
