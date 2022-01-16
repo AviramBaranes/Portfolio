@@ -1,7 +1,6 @@
 pages:
     projects
         H-life
-        Reminder app
         social media app
         time manager
         movie app

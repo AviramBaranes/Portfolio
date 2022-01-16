@@ -6,6 +6,7 @@
     "website": "https://reminder-app-seven.vercel.app/"
   },
   "photosDirName": "ReminderApp",
+  "description": "This is a simple reminder application that records any time a user opens the application and persist any timer a user already saved, it does that via a user id that stored in the local storage that corresponds to a user id in a mongo db collection. The server (express.js) and the client (next.js) communicate via web sockets.",
   "technologies": [
     "node.js",
     "next.js",
@@ -13,6 +14,7 @@
     "express.js",
     "mongo-db",
     "redux",
-    "socket.io"
+    "socket.io",
+    "scss"
   ]
 }

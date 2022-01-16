@@ -17,15 +17,21 @@ const ProjectDetailHeader: FC<ProjectDetailHeader> = ({
   return (
     <div>
       <h2>{name}</h2>
-      <h6>{shortDescription}</h6>
-      {links.website && (
-        <a href={links.website} target='_blank'>
-          {name}
-        </a>
-      )}
-      <a href={links.github} target='_blank'>
-        Github
-      </a>
+      <p>{shortDescription}</p>
+      <ul>
+        {links.website && (
+          <li>
+            <a href={links.website} target='_blank'>
+              {name} (url)
+            </a>
+          </li>
+        )}
+        <li>
+          <a href={links.github} target='_blank'>
+            Git repo
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };
