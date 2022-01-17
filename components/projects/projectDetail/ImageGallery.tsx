@@ -33,10 +33,20 @@ const ImageGallery: FC<ImageGallery> = ({ photosPaths }) => {
     return [...photosPaths].splice(startIndex, 3);
   }
 
+  function getStaticImageSrc(src: string) {
+    if (src.endsWith('.gif')) {
+      src = src.replace('projects', 'gifs');
+      src = src.replace('.gif', '.png');
+    }
+    return src;
+  }
+
   return (
     <div>
       <Link href={process.env.BASE_URL + photosPaths[startIndex]}>
-        <Image src={photosPaths[startIndex]} width={830} height={400} />
+        <a>
+          <Image src={photosPaths[startIndex]} width={830} height={400} />
+        </a>
       </Link>
       <br />
       {photosPaths.length > 3 && (
@@ -52,7 +62,7 @@ const ImageGallery: FC<ImageGallery> = ({ photosPaths }) => {
           >
             <Image
               onClick={() => setStartIndex(photosPaths.indexOf(src))}
-              src={src}
+              src={getStaticImageSrc(src)}
               width={276.6}
               height={133.3}
             />

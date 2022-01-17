@@ -1,6 +1,5 @@
 pages:
     projects
-        H-life
         social media app
         time manager
         movie app
