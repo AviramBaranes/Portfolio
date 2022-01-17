@@ -1,0 +1,11 @@
+{
+  "name": "Time Manager",
+  "shortDescription": "A vanilla javascript (but with typescript) App for managing tasks and time.",
+  "links": {
+    "github": "https://github.com/AviramBaranes/Time-Manger",
+    "website": "https://tasks-time-manager.netlify.app/"
+  },
+  "photosDirName": "TimeManager",
+  "description": "After some hard time in figuring out how to manage my time on different task, I decided to build an app to help me. Because the Implementation is pretty simple I took the challenge of making it a little more difficult by not using any framework library or package (except typescript and scss (; ) ",
+  "technologies": ["typescript", "scss", "html"]
+}
