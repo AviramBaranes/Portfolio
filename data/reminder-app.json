@@ -10,6 +10,7 @@
   "technologies": [
     "node.js",
     "next.js",
+    "react.js",
     "typescript",
     "express.js",
     "mongo-db",

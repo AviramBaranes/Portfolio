@@ -1,0 +1,18 @@
+{
+  "name": "Social Media App",
+  "shortDescription": "A MERN stack application with made by next as a full stack framework.",
+  "links": {
+    "github": "https://github.com/AviramBaranes/Social-Media-App"
+  },
+  "photosDirName": "SocialMediaApp",
+  "description": "I built this application during a Udemy course. This is a MERN stack application  with next.js as a full stack framework running the backend as well as the frontend from the same server. I used mongoDB atlas to run the DB, Socket.IO to handle real time chat and semantic-ui-react for styles.",
+  "technologies": [
+    "node.js",
+    "next.js",
+    "react.js",
+    "express.js",
+    "mongo-db",
+    "socket.io",
+    "css"
+  ]
+}

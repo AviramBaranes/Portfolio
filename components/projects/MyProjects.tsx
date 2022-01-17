@@ -15,7 +15,7 @@ const MyProjects: FC<MyProjects> = () => {
       name: 'Hlife',
       path: 'hlife',
       description:
-        'By far my biggest project, A MERN stack typescript application with secure users registration in the backend and amazing SVG graphs in the frontend.',
+        'By far my biggest project, you should definitely check it out.',
     },
     {
       src: ReminderAppMainPhoto,

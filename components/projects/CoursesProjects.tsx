@@ -31,7 +31,7 @@ const CoursesProjects: FC<CoursesProjects> = () => {
       name: 'Movies App',
       path: 'movies-app',
       description:
-        'A react application with a simple search engine for searching for movies and display their content via 3th party API.',
+        'A react application with a simple search engine (via 3th party API) for searching for movies and display their content.',
     },
   ];
   return (

@@ -1,8 +1,4 @@
 pages:
-    projects
-        social media app
-        music app
-        movie app
     contact page
 
 server:
