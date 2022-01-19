@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+.Modal {
+  position: absolute;
+  top: 4vh;
+  width: 20%;
+  padding: 3rem;
+  color: black;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.Success {
+  background-color: rgba(51, 242, 13, 0.953);
+}
+.Failure {
+  background-color: red;
+}

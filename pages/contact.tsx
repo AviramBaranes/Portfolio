@@ -4,11 +4,7 @@ import Contact from '../components/contact/Contact';
 interface contact {}
 
 const contact: FC<contact> = () => {
-  return (
-    <div>
-      <Contact />
-    </div>
-  );
+  return <Contact />;
 };
 
 export default contact;
