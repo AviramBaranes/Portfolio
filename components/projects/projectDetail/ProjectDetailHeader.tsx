@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import MainTitle from '../../UI/Titles/MainTitle';
+import SubTitle from '../../UI/Titles/SubTitle';
 
 interface ProjectDetailHeader {
   name: string;
@@ -16,7 +18,7 @@ const ProjectDetailHeader: FC<ProjectDetailHeader> = ({
 }) => {
   return (
     <div>
-      <h2>{name}</h2>
+      <MainTitle title={name} />
       <p>{shortDescription}</p>
       <ul>
         {links.website && (

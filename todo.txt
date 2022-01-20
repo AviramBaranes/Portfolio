@@ -1,9 +1,3 @@
-pages:
-    contact page
-
-server:
-    contact endpoint
-
 styles:
     css
     framer motion

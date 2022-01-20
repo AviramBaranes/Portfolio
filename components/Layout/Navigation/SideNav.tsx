@@ -56,7 +56,10 @@ const SideNav: FC = () => {
             >
               <div>
                 <Link href='/'>
-                  <div className={classes.Logo}>
+                  <div
+                    className={classes.Logo}
+                    onClick={(_) => setShouldDisplay(false)}
+                  >
                     <Image src={me} width={100} height={100} />
                     <h6>Aviram Baranes</h6>
                     <p>Web Developer</p>

@@ -32,8 +32,7 @@ const LanguageChart: FC<LanguageChart> = ({
           animate={{ width: chartWidth }}
           initial={{ width: 0 }}
           transition={{
-            duration: 0.75,
-            // ease: 'anticipate',
+            duration: 2,
             type: 'spring',
             delay: 0.1 * index,
           }}

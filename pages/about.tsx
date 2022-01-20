@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
+import AnimatedTitle from '../components/UI/Titles/MainTitle';
 
 interface about {}
 
@@ -8,7 +9,7 @@ const about: FC<about> = () => {
   return (
     <>
       <div>
-        <h3>About</h3>
+        <AnimatedTitle title='About' />
         <p>
           I am a Full Stack developer, with experience building websites and web
           applications. I specialize in TypeScript, JavaScript, Node and React.
