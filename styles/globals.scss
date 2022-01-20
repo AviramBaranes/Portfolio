@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './contactBtn.module.scss';
 
 html,
 body {
@@ -11,11 +12,9 @@ body {
   color: white;
 }
 
-main {
-  width: 87.6%;
-}
 @media (min-width: $desktop-viewport) {
   main {
+    width: 87.6%;
     margin-left: 12.4%;
     padding: 1rem;
   }

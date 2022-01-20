@@ -1,0 +1,41 @@
+@import '../variables.scss';
+
+.Main {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  button {
+    font-size: 1rem;
+    width: 14rem;
+  }
+}
+
+@media (min-width: $big-phone-viewport) {
+  .Main {
+    p {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: $tablet-viewport) {
+  .Main {
+    p {
+      width: 75%;
+      font-size: 1.1rem;
+    }
+  }
+}
+@media (min-width: $desktop-viewport) {
+  .Main {
+    width: 80%;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      width: 70%;
+      font-size: 1.1rem;
+    }
+  }
+}

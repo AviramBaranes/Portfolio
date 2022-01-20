@@ -28,6 +28,7 @@ const Home: NextPage = () => {
         </motion.h4>
         <Link href='contact'>
           <motion.button
+            className='contact-btn'
             variants={contentVariant}
             initial='hidden'
             animate='visible'

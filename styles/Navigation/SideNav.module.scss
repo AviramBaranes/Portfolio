@@ -10,7 +10,7 @@
 .Burger {
   z-index: 101;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   right: 12.5px;
   top: 12.5px;
   div {

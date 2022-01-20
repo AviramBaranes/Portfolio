@@ -12,26 +12,6 @@
   h1 {
     margin-bottom: 1rem;
   }
-
-  button {
-    cursor: pointer;
-    margin: 3rem 0.2rem;
-    padding: 1rem 3rem;
-    width: 85%;
-    background-color: transparent;
-    border: 1px solid $primary-color;
-    color: $primary-color;
-    font-size: 1.2rem;
-    font-weight: 600;
-    &:hover {
-      transition: box-shadow, transform 0.4s ease-in-out;
-      background-color: $primary-color;
-      color: white;
-      border: 1px solid white;
-      transform: scale(1.05);
-      box-shadow: 7px 7px 10px black, -7px 0px 10px black;
-    }
-  }
 }
 
 .SubTitles {
@@ -48,9 +28,6 @@
     h4 {
       font-size: 1.3rem;
     }
-    button {
-      width: 65%;
-    }
   }
 
   .Content {
@@ -61,9 +38,6 @@
   .Main {
     width: 80%;
     margin-top: 7rem;
-    button {
-      width: 40%;
-    }
   }
 }
 
@@ -76,9 +50,6 @@
     }
     h4 {
       font-size: 1rem;
-    }
-    button {
-      width: 20%;
     }
   }
 }

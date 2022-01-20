@@ -1,5 +1,9 @@
 styles:
-    css
+    scss:
+        skills
+        projects
+        detail project
+        contact
     framer motion
 
 *extra:
