@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import '../../variables.scss';
+.Space {
+  font-size: 5rem;
+  height: 20vh;
+}
+.Char {
+  &:hover {
+    color: $primary-color;
+  }
+  font-size: 3rem;
+}
+
+.MainTitle {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.SubTitle {
+  font-family: 'Playfair Display', serif;
+  span {
+    font-size: 1.2rem;
+  }
+}
+
+.MainTitle,
+.SubTitle {
+  margin: unset;
+}
+
+@media (min-width: $big-phone-viewport) {
+  .Char {
+    font-size: 4rem;
+  }
+  .SubTitle {
+    span {
+      font-size: 1.75rem;
+    }
+  }
+}

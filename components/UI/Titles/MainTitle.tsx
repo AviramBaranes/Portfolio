@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 
-import classes from '../../../styles/UI/Titles/MainTitle.module.scss';
+import classes from '../../../styles/UI/Titles/Titles.module.scss';
 
 interface MainTitle {
   title: string;
@@ -9,18 +9,19 @@ interface MainTitle {
 
 const MainTitle: FC<MainTitle> = ({ title }) => {
   return (
-    <h1>
+    <h1 className={classes.MainTitle}>
       <span className={classes.Space}></span>
       {title.split('').map((char, i) => (
         <motion.span
           key={char + i}
           whileHover={{
-            fontSize: '6vh',
+            fontSize: '70px',
             transition: { type: 'spring', stiffness: 400 },
           }}
-          initial={{ opacity: 0, fontSize: '4vh' }}
+          initial={{
+            opacity: 0,
+          }}
           animate={{
-            fontSize: '4vh',
             opacity: 1,
           }}
           className={classes.Char}

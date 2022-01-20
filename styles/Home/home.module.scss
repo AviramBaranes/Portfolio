@@ -1,2 +1,84 @@
-.Main{
+@import '../variables.scss';
+
+.Main {
+  width: 90%;
+  margin: auto;
+  margin-top: 5rem;
+
+  h4 {
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    cursor: pointer;
+    margin: 3rem 0.2rem;
+    padding: 1rem 3rem;
+    width: 85%;
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    font-size: 1.2rem;
+    font-weight: 600;
+    &:hover {
+      transition: box-shadow, transform 0.4s ease-in-out;
+      background-color: $primary-color;
+      color: white;
+      border: 1px solid white;
+      transform: scale(1.05);
+      box-shadow: 7px 7px 10px black, -7px 0px 10px black;
+    }
+  }
+}
+
+.SubTitles {
+  margin-bottom: 2rem;
+}
+
+.Content {
+  margin-left: 0.5rem;
+}
+
+@media (min-width: $big-phone-viewport) {
+  .Main {
+    margin-top: 6rem;
+    h4 {
+      font-size: 1.3rem;
+    }
+    button {
+      width: 65%;
+    }
+  }
+
+  .Content {
+    margin-left: 1rem;
+  }
+}
+@media (min-width: $tablet-viewport) {
+  .Main {
+    width: 80%;
+    margin-top: 7rem;
+    button {
+      width: 40%;
+    }
+  }
+}
+
+@media (min-width: $desktop-viewport) {
+  .Main {
+    width: 95%;
+    margin-top: 8rem;
+    h1 {
+      margin-bottom: 4rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    button {
+      width: 20%;
+    }
+  }
 }

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import MainTitle from '../components/UI/Titles/MainTitle';
 import SubTitle from '../components/UI/Titles/SubTitle';
-import classes from '../styles/Home/Home.module.scss';
+import classes from '../styles/Home/home.module.scss';
 
 const Home: NextPage = () => {
   const contentVariant = {
@@ -17,21 +17,25 @@ const Home: NextPage = () => {
 
   return (
     <div className={classes.Main}>
-      <MainTitle title='Welcome !' />
-      <SubTitle title="I'm Aviram Baranes," />
-      <SubTitle title='A full stack developer' />
-      <motion.h4 variants={contentVariant} initial='hidden' animate='visible'>
-        Front End (React.js) / Back End (Node.js) / TypeScript
-      </motion.h4>
-      <Link href='contact'>
-        <motion.button
-          variants={contentVariant}
-          initial='hidden'
-          animate='visible'
-        >
-          Contact Me
-        </motion.button>
-      </Link>
+      <MainTitle title='Welcome!' />
+      <div className={classes.Content}>
+        <div className={classes.SubTitles}>
+          <SubTitle title="I'm Aviram Baranes," />
+          <SubTitle title='A full stack web developer' />
+        </div>
+        <motion.h4 variants={contentVariant} initial='hidden' animate='visible'>
+          Front End (React.js) / Back End (Node.js) / TypeScript
+        </motion.h4>
+        <Link href='contact'>
+          <motion.button
+            variants={contentVariant}
+            initial='hidden'
+            animate='visible'
+          >
+            Contact Me
+          </motion.button>
+        </Link>
+      </div>
     </div>
   );
 };
