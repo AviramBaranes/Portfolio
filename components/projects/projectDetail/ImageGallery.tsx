@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC, useState } from 'react';
 
-import classes from '../../../styles/projects/projects.module.scss';
+import classes from '../../../styles/projects/detail-project.module.scss';
 
 interface ImageGallery {
   photosPaths: string[];
@@ -42,36 +42,50 @@ const ImageGallery: FC<ImageGallery> = ({ photosPaths }) => {
   }
 
   return (
-    <div>
+    <div className={classes.ImageGallery}>
       <Link href={process.env.BASE_URL + photosPaths[startIndex]}>
         <a>
           <Image src={photosPaths[startIndex]} width={830} height={400} />
         </a>
       </Link>
       <br />
-      {photosPaths.length > 3 && (
-        <button onClick={() => buttonClickHandler('backward')}>{'<'}</button>
-      )}
-      {getPartialArr().map((src) => {
-        return (
-          <div
-            key={src}
-            className={
-              src === photosPaths[startIndex] ? classes.CurrentImage : ''
-            }
+      <div className={classes.ImagesList}>
+        {photosPaths.length > 3 && (
+          <button
+            className={classes.LeftBtn}
+            onClick={() => buttonClickHandler('backward')}
           >
-            <Image
-              onClick={() => setStartIndex(photosPaths.indexOf(src))}
-              src={getStaticImageSrc(src)}
-              width={276.6}
-              height={133.3}
-            />
-          </div>
-        );
-      })}
-      {photosPaths.length > 3 && (
-        <button onClick={() => buttonClickHandler('forward')}>{'>'}</button>
-      )}
+            {'<'}
+          </button>
+        )}
+        {getPartialArr().map((src) => {
+          return (
+            <div
+              key={src}
+              className={
+                src === photosPaths[startIndex]
+                  ? `${classes.CurrentImage} ${classes.Image}`
+                  : classes.Image
+              }
+            >
+              <Image
+                onClick={() => setStartIndex(photosPaths.indexOf(src))}
+                src={getStaticImageSrc(src)}
+                width={276.6}
+                height={133.3}
+              />
+            </div>
+          );
+        })}
+        {photosPaths.length > 3 && (
+          <button
+            className={classes.RightBtn}
+            onClick={() => buttonClickHandler('forward')}
+          >
+            {'>'}
+          </button>
+        )}
+      </div>
     </div>
   );
 };

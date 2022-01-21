@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import classes from '../../styles/projects/projects.module.scss';
 import SocialMediaAppMainPhoto from '../../public/projects/SocialMediaApp/main.png';
 import MusicAppMainPhoto from '../../public/projects/MusicApp/main.png';
 import MovieAppMainPhoto from '../../public/projects/MoviesApp/main.png';
@@ -35,7 +36,7 @@ const CoursesProjects: FC<CoursesProjects> = () => {
     },
   ];
   return (
-    <div>
+    <div className={classes.ProjectsSec}>
       {projects.map((project, i) => (
         <div key={project.alt}>
           <Project
@@ -43,7 +44,7 @@ const CoursesProjects: FC<CoursesProjects> = () => {
             alt={project.alt}
             name={project.name}
             path={project.path}
-            index={i}
+            index={i + 3}
             description={project.description}
           />
         </div>

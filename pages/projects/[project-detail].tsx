@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import path from 'path';
 import fs from 'fs/promises';
 
+import classes from '../../styles/projects/detail-project.module.scss';
 import ProjectDetailHeader from '../../components/projects/projectDetail/ProjectDetailHeader';
 import ImageGallery from '../../components/projects/projectDetail/ImageGallery';
 import ProjectDetailFooter from '../../components/projects/projectDetail/ProjectDetailFooter';
@@ -28,7 +29,7 @@ const DetailProject: FC<DetailProject> = ({
   technologies,
 }) => {
   return (
-    <>
+    <div className={classes.ProjectDetailPage}>
       <ProjectDetailHeader
         name={name}
         shortDescription={shortDescription}
@@ -39,7 +40,7 @@ const DetailProject: FC<DetailProject> = ({
         description={description}
         technologies={technologies}
       />
-    </>
+    </div>
   );
 };
 

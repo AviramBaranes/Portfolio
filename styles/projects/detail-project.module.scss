@@ -1,0 +1,59 @@
+@import '../variables.scss';
+
+.ProjectDetailPage {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  h1 {
+    text-align: center;
+  }
+  ul {
+    list-style: square;
+    width: 50%;
+    transform: translateX(-15%);
+  }
+}
+
+.ImageGallery {
+  margin: 2rem auto;
+}
+
+.ImagesList {
+  display: flex;
+  align-items: center;
+  .Image {
+    margin: 0.2rem;
+  }
+
+  button {
+    padding: 0.5rem 0.2rem;
+    background-color: $primary-color;
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.RightBtn {
+  border-radius: 0rem 0.3rem 0.3rem 0rem;
+}
+.LeftBtn {
+  border-radius: 0.3rem 0rem 0rem 0.3rem;
+}
+
+.CurrentImage {
+  background-color: $primary-color;
+  img {
+    object-fit: fill;
+  }
+}
+
+.TechnologiesList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3rem;
+  column-gap: 3rem;
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}

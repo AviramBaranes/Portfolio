@@ -1,4 +1,6 @@
 import { FC } from 'react';
+
+import classes from '../../../styles/projects/detail-project.module.scss';
 import { TECHNOLOGIES } from '../../../utils/frameworksList';
 import Technology from '../../UI/Technology/Technology';
 
@@ -17,17 +19,19 @@ const ProjectDetailFooter: FC<ProjectDetailFooter> = ({
   return (
     <div>
       <p>{description}</p>
-      {technologiesToDisplay.map((technology, i) => (
-        <div key={technology.alt}>
-          <Technology
-            index={i}
-            alt={technology.alt}
-            src={technology.src}
-            white={technology.white}
-            link={technology.link}
-          />
-        </div>
-      ))}
+      <div className={classes.TechnologiesList}>
+        {technologiesToDisplay.map((technology, i) => (
+          <div key={technology.alt}>
+            <Technology
+              index={i}
+              alt={technology.alt}
+              src={technology.src}
+              white={technology.white}
+              link={technology.link}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

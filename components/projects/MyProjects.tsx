@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import classes from '../../styles/projects/projects.module.scss';
 import HlifeMainPhoto from '../../public/projects/Hlife/home-page.png';
 import ReminderAppMainPhoto from '../../public/projects/ReminderApp/main.png';
 import TaskManagerMainPhoto from '../../public/projects/TimeManager/main.png';
@@ -35,7 +36,7 @@ const MyProjects: FC<MyProjects> = () => {
     },
   ];
   return (
-    <div>
+    <div className={classes.ProjectsSec}>
       {projects.map((project, i) => (
         <div key={project.alt}>
           <Project

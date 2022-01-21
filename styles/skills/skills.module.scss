@@ -1,23 +1,108 @@
+@import '../variables.scss';
+
+.Skills {
+  h1 {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+  }
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.Languages {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
 .LanguageChartContainer {
-  width: 50%;
   height: 4px;
   background-color: grey;
   border-radius: 5rem;
 }
 
 .FrameWorks {
-  width: 50%;
+  width: 80%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-row-gap: 5rem;
-  grid-column-gap: 5rem;
+  grid-row-gap: 3rem;
+  grid-column-gap: 3rem;
 }
 
 .White {
   img {
     filter: invert(100%) sepia(1%) saturate(1283%) hue-rotate(201deg)
       brightness(117%) contrast(100%);
+  }
+}
+
+@media (min-width: $big-phone-viewport) {
+  .Skills {
+    margin-top: 3rem;
+  }
+  .Languages {
+    width: 80%;
+    margin: 0rem 0rem 3rem 1.5rem;
+  }
+  .FrameWorks {
+    grid-row-gap: 5rem;
+    grid-column-gap: 5rem;
+  }
+}
+
+@media (min-width: $tablet-viewport) {
+  .Languages {
+    margin: 0rem 0rem 4rem 2rem;
+  }
+  .FrameWorks {
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 3rem;
+    img {
+      transform: scale(0.9);
+    }
+  }
+}
+
+@media (min-width: $desktop-viewport) {
+  .Skills {
+    h1 {
+      width: 100%;
+    }
+    h3 {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    width: 95%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-left: 6rem;
+  }
+  .Languages {
+    width: 70%;
+    margin: unset;
+    margin-bottom: 6rem;
+  }
+  .FrameWorks {
+    width: 50%;
+    margin: unset;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 3rem;
+    img {
+      transform: scale(0.9);
+    }
   }
 }

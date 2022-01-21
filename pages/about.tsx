@@ -11,7 +11,7 @@ const about: FC<about> = () => {
   return (
     <div className={classes.Main}>
       <div>
-        <AnimatedTitle title='About' />
+        <AnimatedTitle title='About Me' />
         <p>
           I am a full stack web developer, with experience building websites and
           web applications. I specialize in TypeScript, JavaScript, Node and

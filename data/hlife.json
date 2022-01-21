@@ -1,6 +1,6 @@
 {
   "name": "Hlife",
-  "shortDescription": "By far my biggest project, A MERN stack typescript application with secure users registration in the backend and amazing SVG graphs in the frontend.",
+  "shortDescription": "A MERN stack typescript application with secure users registration in the backend and amazing SVG graphs in the frontend.",
   "links": {
     "github": "https://github.com/AviramBaranes/Hlife",
     "website": "https://hlife.vercel.app/"

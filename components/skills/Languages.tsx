@@ -1,4 +1,6 @@
 import { FC } from 'react';
+
+import classes from '../../styles/skills/skills.module.scss';
 import LanguageChart from './LanguageChart';
 
 interface Languages {}
@@ -11,7 +13,7 @@ const Languages: FC<Languages> = () => {
     { name: 'Python', color: '#FFD340', skillLevel: 0.5 },
   ];
   return (
-    <div>
+    <div className={classes.Languages}>
       {languages.map((language, index) => (
         <div key={language.name}>
           <LanguageChart

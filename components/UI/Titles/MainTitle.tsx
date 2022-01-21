@@ -10,7 +10,6 @@ interface MainTitle {
 const MainTitle: FC<MainTitle> = ({ title }) => {
   return (
     <h1 className={classes.MainTitle}>
-      <span className={classes.Space}></span>
       {title.split('').map((char, i) => (
         <motion.span
           key={char + i}
@@ -30,6 +29,7 @@ const MainTitle: FC<MainTitle> = ({ title }) => {
           {char}
         </motion.span>
       ))}
+      <span className={classes.Space}></span>
     </h1>
   );
 };

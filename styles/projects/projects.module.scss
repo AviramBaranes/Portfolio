@@ -1,5 +1,72 @@
 @import '../variables.scss';
 
-.CurrentImage {
-  border: 2px solid $primary-color;
+.ProjectsPage {
+  margin-top: 2.5rem;
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.Project {
+  cursor: pointer;
+  text-align: center;
+  width: 85%;
+  margin: auto;
+  border: 2px solid black;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  background-color: $primary-color;
+  h3 {
+    margin-bottom: 1rem;
+    color: black;
+  }
+  p {
+    color: black;
+  }
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+@media (min-width: $big-phone-viewport) {
+  .Project {
+    min-height: 22rem;
+    width: 75%;
+  }
+}
+
+@media (min-width: $tablet-viewport) {
+  .ProjectsPage {
+    h1 {
+      margin-bottom: 3rem;
+    }
+  }
+  .Project {
+    min-height: 25rem;
+  }
+  .ProjectsSec {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: $desktop-viewport) {
+  .ProjectsPage {
+    h1 {
+      text-align: center;
+    }
+  }
+  .Project {
+    width: 70%;
+    min-height: 25rem;
+  }
+  .ProjectsSec {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3rem;
+    display: grid;
+    column-gap: 0rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
