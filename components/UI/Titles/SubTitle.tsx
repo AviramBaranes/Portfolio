@@ -5,9 +5,12 @@ import classes from '../../../styles/UI/Titles/Titles.module.scss';
 
 interface SubTitle {
   title: string;
+  fast?: boolean;
 }
 
-const SubTitle: FC<SubTitle> = ({ title }) => {
+const SubTitle: FC<SubTitle> = ({ title, fast = false }) => {
+  const duration = fast ? 0.03 : 0.1;
+  const delayFactor = fast ? 0.03 : 0.075;
   return (
     <h3 className={classes.SubTitle}>
       {title.split('').map((char, i) => (
@@ -17,7 +20,7 @@ const SubTitle: FC<SubTitle> = ({ title }) => {
           animate={{
             opacity: 1,
           }}
-          transition={{ duration: 0.1, delay: i * 0.075 }}
+          transition={{ duration, delay: i * delayFactor }}
         >
           {char}
         </motion.span>

@@ -20,9 +20,9 @@ const skills: FC<skills> = () => {
       className={classes.Skills}
     >
       <MainTitle title='My Skills' />
-      <SubTitle title='Programming Languages' />
+      <SubTitle fast title='Programming Languages' />
       <Languages />
-      <SubTitle title='Frame-Works, Libraries & Packages' />
+      <SubTitle fast title='Frame-Works, Libraries & Packages' />
       <br />
       <FrameWorks />
     </motion.div>

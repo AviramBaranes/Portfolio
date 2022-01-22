@@ -12,7 +12,7 @@ const Home: NextPage = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { delay: 2.2, duration: 1.25 },
+      transition: { delay: 1, duration: 1.25 },
     },
   };
 
@@ -27,8 +27,10 @@ const Home: NextPage = () => {
       <MainTitle title='Welcome!' />
       <div className={classes.Content}>
         <div className={classes.SubTitles}>
-          <SubTitle title="I'm Aviram Baranes, A full stack web developer" />
-          {/* <SubTitle title='A full stack web developer' /> */}
+          <SubTitle
+            title="I'm Aviram Baranes, A full stack web developer"
+            fast
+          />
         </div>
         <motion.h4 variants={contentVariant} initial='hidden' animate='visible'>
           Front End (React.js) / Back End (Node.js) / TypeScript

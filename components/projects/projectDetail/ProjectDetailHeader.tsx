@@ -24,7 +24,7 @@ const ProjectDetailHeader: FC<ProjectDetailHeader> = ({
         {links.website && (
           <li>
             <a href={links.website} target='_blank'>
-              {name} (url)
+              {name} (website url)
             </a>
           </li>
         )}

@@ -1,11 +1,4 @@
-animation
-    about page
-    detail project
-    contact page
-
 *extra:
-    document mouse event
-    control size and duration on Title components
     images modal instead of link
 
 deployment
