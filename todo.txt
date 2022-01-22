@@ -1,9 +1,9 @@
 styles:
     scss:
-        contact
     framer motion
 
 *extra:
+    document mouse event
     control size and duration on Title components
     images modal instead of link
 

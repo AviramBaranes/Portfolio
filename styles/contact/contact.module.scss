@@ -1,5 +1,79 @@
 @import '../variables.scss';
 
+.ContactPage {
+  margin: auto;
+  margin-top: 3rem;
+  width: 90%;
+  text-align: center;
+}
+
+.ContactForm {
+  margin: 3rem auto;
+
+  p {
+    color: red;
+  }
+
+  button {
+    margin: 3rem;
+    width: 10rem;
+    padding: 0.8rem 0rem;
+  }
+}
+
+.Container {
+  width: 80%;
+  margin: 0.8rem auto;
+  position: relative;
+  input,
+  textarea {
+    width: 100%;
+    background-color: #4d4d4d;
+    border: none;
+    padding: 0.5rem 0.5rem;
+
+    &:focus {
+      outline: none;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  input:focus + .Border {
+    transition: 0.4s;
+    width: 100%;
+  }
+
+  textarea + .Border {
+    transform: translateY(-4px);
+  }
+
+  textarea:focus + .Border {
+    transition: 0.4s;
+    width: 100%;
+  }
+}
+
+.Blur {
+  transition: 0.4s;
+  width: 0%;
+}
+
+.Border {
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  display: block;
+  width: 0%;
+  background-color: rgb(5, 255, 5);
+}
+
+.MessageBorder {
+  transform: translateY(-4px);
+}
+
 .Modal {
   position: absolute;
   top: 4vh;
@@ -15,4 +89,32 @@
 }
 .Failure {
   background-color: red;
+}
+
+@media (min-width: $big-phone-viewport) {
+  .ContactPage {
+    margin-top: 4.5rem;
+    max-width: 30rem;
+  }
+  .ContactForm {
+    margin-top: 5rem;
+  }
+  .Container {
+    input,
+    textarea {
+      font-size: 1.1rem;
+      padding: 0.75rem 0.6rem;
+    }
+  }
+}
+@media (min-width: $tablet-viewport) {
+  .ContactPage {
+    max-width: 35rem;
+  }
+}
+@media (min-width: $desktop-viewport) {
+  .ContactPage {
+    margin-top: 10rem;
+    max-width: 40rem;
+  }
 }

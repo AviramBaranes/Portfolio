@@ -8,6 +8,7 @@ interface Contact {}
 const Contact: FC<Contact> = () => {
   const [error, setError] = useState('');
   const [modalProps, setModalProps] = useState({ content: '', className: '' });
+  const [loseFocus, setLoseFocus] = useState({ email: false, message: false });
   const [fields, setFields] = useState({
     email: '',
     message: '',
@@ -68,37 +69,58 @@ const Contact: FC<Contact> = () => {
       clearModal();
     }
   }
+
+  function blurHandler(e: React.FocusEvent) {
+    const { name } = e.target as any;
+    console.log(name);
+
+    setLoseFocus((prev) => ({ ...prev, [name]: true }));
+  }
+
   const shouldDisplayModal = !!(modalProps.content && modalProps.className);
   return (
-    <div>
+    <div className={classes.ContactForm}>
       {shouldDisplayModal && (
         <Modal text={modalProps.content} className={modalProps.className} />
       )}
       <p>{error}</p>
       <form onSubmit={formSubmitHandler}>
-        <div className='input-container'>
+        <div className={classes.Container}>
           <input
+            onBlur={blurHandler}
             onChange={formChangeHandler}
             value={fields.email}
             required
             name='email'
             type='email'
-            id='email'
+            placeholder='Email'
+            autoComplete='off'
           />
-          <label htmlFor='email'>Email</label>
+          <span
+            className={`${classes.Border} ${
+              loseFocus.email ? classes.Blur : ''
+            }`}
+          ></span>
         </div>
-        <div className='input-container'>
+        <div className={classes.Container}>
           <textarea
+            onBlur={blurHandler}
             onChange={formChangeHandler}
             value={fields.message}
-            id='message'
-            cols={30}
+            cols={22}
             name='message'
-            rows={10}
+            rows={5}
+            placeholder='Message'
           ></textarea>
-          <label htmlFor='message'>Message</label>
+          <span
+            className={`${classes.Border} ${
+              loseFocus.message ? classes.Blur : ''
+            }`}
+          ></span>
         </div>
-        <button type='submit'>Send</button>
+        <button className='contact-btn' type='submit'>
+          Send
+        </button>
       </form>
     </div>
   );
