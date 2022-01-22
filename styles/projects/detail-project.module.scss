@@ -3,14 +3,14 @@
 .ProjectDetailPage {
   width: 90%;
   margin: auto;
+  padding-bottom: 1rem;
   margin-top: 3rem;
   h1 {
     text-align: center;
   }
   ul {
     list-style: square;
-    width: 50%;
-    transform: translateX(-15%);
+    transform: translateX(-7%);
   }
 }
 
@@ -19,10 +19,13 @@
 }
 
 .ImagesList {
+  max-width: 52rem;
+
   display: flex;
   align-items: center;
   .Image {
     margin: 0.2rem;
+    cursor: pointer;
   }
 
   button {
@@ -56,4 +59,84 @@
   width: 80%;
   margin: 2rem auto;
   text-align: center;
+}
+
+@media (min-width: $big-phone-viewport) {
+  .TechnologiesList {
+    row-gap: 4rem;
+    column-gap: 4rem;
+    width: 70%;
+  }
+  .ProjectDetailPage {
+    width: 85%;
+    ul {
+      transform: translateX(-5%);
+    }
+  }
+  .ImagesList {
+    button {
+      padding: 0.9rem 0.3rem;
+    }
+  }
+  .RightBtn {
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+  }
+  .LeftBtn {
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+  }
+}
+
+@media (min-width: $tablet-viewport) {
+  .ProjectDetailPage {
+    ul {
+      transform: translateX(-3%);
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  .ImagesList {
+    button {
+      padding: 1.5rem 0.4rem;
+      font-size: 1.2rem;
+      margin: 0.1rem;
+    }
+  }
+}
+
+@media (min-width: $desktop-viewport) {
+  .ProjectDetailPage {
+    ul {
+      list-style: none;
+      text-decoration: underline;
+      width: 40%;
+      margin: auto;
+      margin-top: 4rem;
+    }
+    p {
+      text-align: center;
+      width: 40%;
+      margin: 2rem auto;
+      font-size: 1.3rem;
+    }
+  }
+
+  .ImageGallery {
+    width: 50%;
+    margin: 3rem auto;
+  }
+  .DetailFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    p {
+      text-align: left;
+      width: 40%;
+      margin: unset;
+    }
+  }
+  .TechnologiesList {
+    width: 40%;
+  }
 }

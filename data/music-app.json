@@ -7,5 +7,5 @@
   },
   "photosDirName": "MusicApp",
   "description": "This is a simple music player application that I built during a react course. It uses a free audio covers for the music and react for the UI",
-  "technologies": ["react.js", "scss"]
+  "technologies": ["react.js", "scss", "redux"]
 }

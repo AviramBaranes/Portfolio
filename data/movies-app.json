@@ -6,5 +6,5 @@
   },
   "photosDirName": "MoviesApp",
   "description": "This is a simple movie app I built for practicing react after building a similar app for games",
-  "technologies": ["react.js", "css"]
+  "technologies": ["react.js", "css", "redux"]
 }

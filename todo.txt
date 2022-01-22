@@ -1,12 +1,10 @@
 styles:
     scss:
-        skills
-        projects
-        detail project
         contact
     framer motion
 
 *extra:
+    control size and duration on Title components
     images modal instead of link
 
 deployment

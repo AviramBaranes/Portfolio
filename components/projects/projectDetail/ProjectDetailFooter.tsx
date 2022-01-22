@@ -17,7 +17,7 @@ const ProjectDetailFooter: FC<ProjectDetailFooter> = ({
     technologies.includes(tech.name)
   );
   return (
-    <div>
+    <div className={classes.DetailFooter}>
       <p>{description}</p>
       <div className={classes.TechnologiesList}>
         {technologiesToDisplay.map((technology, i) => (
