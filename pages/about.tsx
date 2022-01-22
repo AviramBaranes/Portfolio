@@ -4,12 +4,20 @@ import { FC } from 'react';
 
 import classes from '../styles/About/about.module.scss';
 import AnimatedTitle from '../components/UI/Titles/MainTitle';
+import { motion } from 'framer-motion';
+import { pageVariant } from '../utils/pageAnimation';
 
 interface about {}
 
 const about: FC<about> = () => {
   return (
-    <div className={classes.Main}>
+    <motion.div
+      variants={pageVariant}
+      animate='visible'
+      initial='hidden'
+      exit='exit'
+      className={classes.Main}
+    >
       <div>
         <AnimatedTitle title='About Me' />
         <p>
@@ -31,7 +39,7 @@ const about: FC<about> = () => {
           <button className='contact-btn'>Sounds Good!</button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

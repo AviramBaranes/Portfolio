@@ -7,6 +7,8 @@ import classes from '../../styles/projects/detail-project.module.scss';
 import ProjectDetailHeader from '../../components/projects/projectDetail/ProjectDetailHeader';
 import ImageGallery from '../../components/projects/projectDetail/ImageGallery';
 import ProjectDetailFooter from '../../components/projects/projectDetail/ProjectDetailFooter';
+import { motion } from 'framer-motion';
+import { pageVariant } from '../../utils/pageAnimation';
 
 interface DetailProject {
   name: string;
@@ -29,7 +31,13 @@ const DetailProject: FC<DetailProject> = ({
   technologies,
 }) => {
   return (
-    <div className={classes.ProjectDetailPage}>
+    <motion.div
+      variants={pageVariant}
+      animate='visible'
+      initial='hidden'
+      exit='exit'
+      className={classes.ProjectDetailPage}
+    >
       <ProjectDetailHeader
         name={name}
         shortDescription={shortDescription}
@@ -40,7 +48,7 @@ const DetailProject: FC<DetailProject> = ({
         description={description}
         technologies={technologies}
       />
-    </div>
+    </motion.div>
   );
 };
 

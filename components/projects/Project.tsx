@@ -18,7 +18,7 @@ interface Project {
 const Project: FC<Project> = ({ src, alt, name, path, index, description }) => {
   return (
     <motion.div
-      initial={{ translateY: '-100%', translateX: '-100%', opacity: 0 }}
+      initial={{ translateY: '100%', translateX: '-100%', opacity: 0 }}
       animate={{ translateY: 0, translateX: 0, opacity: 1 }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
       className={classes.Project}

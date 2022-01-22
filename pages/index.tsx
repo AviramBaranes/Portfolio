@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import MainTitle from '../components/UI/Titles/MainTitle';
 import SubTitle from '../components/UI/Titles/SubTitle';
 import classes from '../styles/Home/home.module.scss';
+import { pageVariant } from '../utils/pageAnimation';
 
 const Home: NextPage = () => {
   const contentVariant = {
@@ -16,7 +17,13 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className={classes.Main}>
+    <motion.div
+      variants={pageVariant}
+      animate='visible'
+      initial='hidden'
+      exit='exit'
+      className={classes.Main}
+    >
       <MainTitle title='Welcome!' />
       <div className={classes.Content}>
         <div className={classes.SubTitles}>
@@ -37,7 +44,7 @@ const Home: NextPage = () => {
           </motion.button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

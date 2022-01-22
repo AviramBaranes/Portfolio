@@ -1,13 +1,16 @@
-import '../styles/globals.scss'
-import type { AppProps } from 'next/app'
-import Layout from '../components/Layout/Layout'
+import '../styles/globals.scss';
+import type { AppProps } from 'next/app';
+import Layout from '../components/Layout/Layout';
+import { AnimatePresence } from 'framer-motion';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return(
+function MyApp({ Component, pageProps, router }: AppProps) {
+  return (
     <Layout>
-        <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
     </Layout>
-  ) 
+  );
 }
 
-export default MyApp
+export default MyApp;
