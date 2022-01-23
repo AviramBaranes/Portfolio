@@ -1,5 +1,0 @@
-*extra:
-    images modal instead of link
-
-deployment
-

@@ -10,7 +10,6 @@ interface ImageGallery {
 
 const ImageGallery: FC<ImageGallery> = ({ photosPaths }) => {
   const [startIndex, setStartIndex] = useState(0);
-  const [showModal, setShowModal] = useState(false);
 
   function buttonClickHandler(direction: 'forward' | 'backward') {
     if (direction === 'backward')
@@ -46,7 +45,12 @@ const ImageGallery: FC<ImageGallery> = ({ photosPaths }) => {
     <div className={classes.ImageGallery}>
       <Link href={process.env.BASE_URL + photosPaths[startIndex]}>
         <a>
-          <Image src={photosPaths[startIndex]} width={830} height={400} />
+          <Image
+            src={photosPaths[startIndex]}
+            width={830}
+            height={400}
+            alt='project-image'
+          />
         </a>
       </Link>
       <br />
@@ -74,6 +78,7 @@ const ImageGallery: FC<ImageGallery> = ({ photosPaths }) => {
                 src={getStaticImageSrc(src)}
                 width={276.6}
                 height={133.3}
+                alt='project-image'
               />
             </div>
           );

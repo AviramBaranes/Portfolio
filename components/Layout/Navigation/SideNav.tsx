@@ -60,7 +60,12 @@ const SideNav: FC = () => {
                     className={classes.Logo}
                     onClick={(_) => setShouldDisplay(false)}
                   >
-                    <Image src={me} width={100} height={100} />
+                    <Image
+                      src={me}
+                      width={100}
+                      height={100}
+                      alt='Profile pic'
+                    />
                     <h6>Aviram Baranes</h6>
                     <p>Web Developer</p>
                   </div>
@@ -90,15 +95,30 @@ const SideNav: FC = () => {
               <ul className={classes.Icons}>
                 <li>
                   <a
+                    rel='noopener noreferrer'
                     href='https://www.linkedin.com/in/aviram-baranes/'
                     target='_blank'
                   >
-                    <Image src={linkedInIcon} width={30} height={30} />
+                    <Image
+                      alt='linkedin-icon'
+                      src={linkedInIcon}
+                      width={30}
+                      height={30}
+                    />
                   </a>
                 </li>
                 <li>
-                  <a href='https://github.com/AviramBaranes' target='_blank'>
-                    <Image src={githubIcon} width={30} height={30} />
+                  <a
+                    rel='noopener noreferrer'
+                    href='https://github.com/AviramBaranes'
+                    target='_blank'
+                  >
+                    <Image
+                      alt='github-icon'
+                      src={githubIcon}
+                      width={30}
+                      height={30}
+                    />
                   </a>
                 </li>
               </ul>

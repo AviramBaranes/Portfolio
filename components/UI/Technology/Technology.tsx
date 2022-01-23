@@ -21,7 +21,7 @@ const Technology: FC<Technology> = ({ white, src, alt, link, index }) => {
       transition={{ duration: 0.2, delay: 0.1 * index + 0.5 }}
       key={alt}
     >
-      <a href={link} target='_blank'>
+      <a rel='noopener noreferrer' href={link} target='_blank'>
         <Image src={src} width={75} height={75} alt={alt} />
       </a>
     </motion.div>

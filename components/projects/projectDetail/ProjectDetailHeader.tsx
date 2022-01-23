@@ -23,13 +23,13 @@ const ProjectDetailHeader: FC<ProjectDetailHeader> = ({
       <ul>
         {links.website && (
           <li>
-            <a href={links.website} target='_blank'>
+            <a rel='noopener noreferrer' href={links.website} target='_blank'>
               {name} (website url)
             </a>
           </li>
         )}
         <li>
-          <a href={links.github} target='_blank'>
+          <a rel='noopener noreferrer' href={links.github} target='_blank'>
             Git repo
           </a>
         </li>
