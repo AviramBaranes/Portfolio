@@ -43,7 +43,9 @@ const ImageGallery: FC<ImageGallery> = ({ photosPaths }) => {
 
   return (
     <div className={classes.ImageGallery}>
-      <Link href={process.env.BASE_URL + photosPaths[startIndex]}>
+      <Link
+        href={`https://aviram-portfolio.vercel.app${photosPaths[startIndex]}`}
+      >
         <a>
           <Image
             src={photosPaths[startIndex]}
