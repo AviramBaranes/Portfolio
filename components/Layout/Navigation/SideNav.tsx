@@ -4,7 +4,7 @@ import { FC, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import classes from '../../../styles/Navigation/SideNav.module.scss';
-import me from '../../../public/Me/aviram.jpg';
+import me from '../../../public/Me/app-icon.png';
 import linkedInIcon from '../../../public/icons/contact/linkedin-icon.svg';
 import githubIcon from '../../../public/icons/contact/github-icon.svg';
 import Backdrop from '../../UI/Backdrop/Backdrop';

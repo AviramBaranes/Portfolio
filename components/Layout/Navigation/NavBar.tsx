@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import classes from '../../../styles/Navigation/NavBar.module.scss';
-import me from '../../../public/Me/aviram.jpg';
+import me from '../../../public/Me/app-icon.png';
 import linkedInIcon from '../../../public/icons/contact/linkedin-icon.svg';
 import githubIcon from '../../../public/icons/contact/github-icon.svg';
 import Image from 'next/image';
