@@ -28,7 +28,7 @@ const about: FC<about> = () => {
         <p>
           Ambitious and motivated autodidact with boundless enthusiasm and
           passion to enrich and develop new skills and knowledge. I love
-          challenging my self with things that matters and to keep learning new
+          challenging myself with things that matters and to keep learning new
           things.
         </p>
         <p>
