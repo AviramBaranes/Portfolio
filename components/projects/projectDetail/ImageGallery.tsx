@@ -10,6 +10,7 @@ interface ImageGallery {
 
 const ImageGallery: FC<ImageGallery> = ({ photosPaths }) => {
   const [startIndex, setStartIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
   function buttonClickHandler(direction: 'forward' | 'backward') {
     if (direction === 'backward')

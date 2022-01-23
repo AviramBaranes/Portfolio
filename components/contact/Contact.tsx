@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
 import React, { FC, useState } from 'react';
 
 import classes from '../../styles/contact/contact.module.scss';
-import Modal from '../UI/Modal/Modal';
 
 interface Contact {}
 
@@ -13,7 +13,6 @@ const Contact: FC<Contact> = () => {
     email: '',
     message: '',
   });
-  const { email, message } = fields;
 
   function formChangeHandler(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -33,7 +32,7 @@ const Contact: FC<Contact> = () => {
   async function formSubmitHandler(e: React.FormEvent) {
     e.preventDefault();
 
-    if (!message.length) {
+    if (!fields.message.length) {
       setError('Please provide a message');
       return;
     }
@@ -79,50 +78,59 @@ const Contact: FC<Contact> = () => {
 
   const shouldDisplayModal = !!(modalProps.content && modalProps.className);
   return (
-    <div className={classes.ContactForm}>
+    <>
       {shouldDisplayModal && (
-        <Modal text={modalProps.content} className={modalProps.className} />
+        <motion.div
+          initial={{ y: '-100%', x: '-50%', opacity: 0 }}
+          animate={{ y: 0, x: '-50%', opacity: 1 }}
+          transition={{ duration: 0.3, type: 'spring' }}
+          className={`${modalProps.className} ${classes.Modal}`}
+        >
+          <h3>{modalProps.content}</h3>
+        </motion.div>
       )}
-      <p>{error}</p>
-      <form onSubmit={formSubmitHandler}>
-        <div className={classes.Container}>
-          <input
-            onBlur={blurHandler}
-            onChange={formChangeHandler}
-            value={fields.email}
-            required
-            name='email'
-            type='email'
-            placeholder='Email'
-            autoComplete='off'
-          />
-          <span
-            className={`${classes.Border} ${
-              loseFocus.email ? classes.Blur : ''
-            }`}
-          ></span>
-        </div>
-        <div className={classes.Container}>
-          <textarea
-            onBlur={blurHandler}
-            onChange={formChangeHandler}
-            value={fields.message}
-            cols={22}
-            name='message'
-            rows={5}
-            placeholder='Message'
-          ></textarea>
-          <span
-            className={`${classes.Border} ${
-              loseFocus.message ? classes.Blur : ''
-            }`}
-          ></span>
-        </div>
-        <button className='contact-btn' type='submit'>
-          Send
-        </button>
-      </form>
-    </div>
+      <div className={classes.ContactForm}>
+        <p>{error}</p>
+        <form onSubmit={formSubmitHandler}>
+          <div className={classes.Container}>
+            <input
+              onBlur={blurHandler}
+              onChange={formChangeHandler}
+              value={fields.email}
+              required
+              name='email'
+              type='email'
+              placeholder='Email'
+              autoComplete='off'
+            />
+            <span
+              className={`${classes.Border} ${
+                loseFocus.email ? classes.Blur : ''
+              }`}
+            ></span>
+          </div>
+          <div className={classes.Container}>
+            <textarea
+              onBlur={blurHandler}
+              onChange={formChangeHandler}
+              value={fields.message}
+              cols={22}
+              name='message'
+              rows={5}
+              placeholder='Message'
+            ></textarea>
+            <span
+              className={`${classes.Border} ${
+                loseFocus.message ? classes.Blur : ''
+              }`}
+            ></span>
+          </div>
+          <button className='contact-btn' type='submit'>
+            Send
+          </button>
+        </form>
+      </div>
+    </>
   );
 };
 
